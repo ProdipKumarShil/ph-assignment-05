@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-05</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body class="max-w-6xl mx-auto rounded-lg my-6">
+<body class="max-w-6xl mx-auto my-6">
     <!-- header section -->
     <header class="bg-[#1090d81a] px-12 py-2 rounded-lg flex justify-between items-center">
         <div class="">
@@ -18,8 +19,29 @@
     <!-- header section end -->
 
     <!-- main section -->
-    <main>
+    <main class="grid grid-cols-4 my-12">
+        <div class="grid grid-cols-3 col-span-3">
+            <!-- Triangle Card -->
+            <div class="border-2 rounded-lg flex flex-col items-center py-8 px-5">
+                <img src="./images/triangle.png" alt="" srcset="">
+                <h1 class="text-2xl mt-6 mb-2 text-[#414141] font-bold ">Triangle</h1>
+                <p class="text-[#414141]">Area (A) = 0.5 X b X h</p>
+                <div class=" flex justify-end ml-4 mt-5 mb-8 w-full div-center">
+                    <div class="">
+                        <input class="bg-slate-200 p-1 w-3/5 rounded-md" type="text" placeholder="b">
+                        <span>cm</span>
+                    </div>
+                    <div class="">
+                        <input class="bg-slate-200 p-1 w-3/5 rounded-md" type="text" placeholder="b">
+                        <span>cm</span>
+                    </div>
+                </div>
+                <button class="text-sm font-bold text-white bg-[#1090D8] hover:bg-[#0f78b4] h-12 w-[100%] rounded-lg">Calculate</button>
+            </div>
+        </div>
 
+        <!-- area calculation -->
+        <div class=""></div>
     </main>
     <!-- main section end -->
 
