@@ -13,6 +13,7 @@ function getValueById(idName){
 function areaCalculation(btnId, mul){
     getValueById(btnId).addEventListener('click', function(event){
         let area = 1;
+        const pi = 3.1416;
         // card children
         const cardParent = event.target.parentNode.children;
         // input values
@@ -54,15 +55,28 @@ function areaCalculation(btnId, mul){
 
 
         // multiplication by condition
-        // if(mul == 'one'){
-        //     area = 1 * parseFloat(firstInputValue) * parseFloat(secondInputValue);
-        // }
+        if(mul == 'one'){
+            area = 1 * parseFloat(firstInputValue) * parseFloat(secondInputValue);
+            console.log(area);
+        }
+        else if(mul == 'half'){
+            area = 0.5 * parseFloat(firstInputValue) * parseFloat(secondInputValue);
+            console.log(area);
+        }
+        else if(mul == 'pi'){
+            area = pi * parseFloat(firstInputValue) * parseFloat(secondInputValue);
+            console.log(area);
+        }
+        else{
+            area == 0
+            console.log(area)
+        }
         
         
     })
 }
 
-areaCalculation('triangle-card-btn')
+areaCalculation('triangle-card-btn', "one")
 
 
 
