@@ -1,15 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
 
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</head>
+
+<body class="max-w-6xl mx-auto my-6">
+
+    <!-- header section -->
+    <header class="bg-[#1090d81a] px-12 py-2 rounded-lg flex justify-between items-center">
+        <div class="">
+            <h1 class="text-5xl font-bold text-[#111111cc] mb-1">Interactive</h1>
+            <h1 class="text-2xl font-medium text-[#11111199]">Blog Genius</h1>
+        </div>
+        <button id="geo-btn" class="text-sm font-bold text-white bg-[#1090D8] hover:bg-[#0f78b4] h-12 px-9 rounded-lg">Geometry Page</button>
+    </header>
+    <!-- header section end -->
+
+    <main class="my-7">
+
+
+        <div id="accordion-collapse" data-accordion="collapse">
+            <h2 id="accordion-collapse-heading-1">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-1">
+                    <span class="text-3xl">What is DOM? What is purpose of the DOM?</span>
+                    <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <p class="font-medium mb-2 text-gray-500 dark:text-gray-400">DOM meaning document object model. it rapresent the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page....</p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-2">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                    aria-controls="accordion-collapse-body-2">
+                    <span class="text-3xl">What is Event Bubble?</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="font-medium mb-2 text-gray-500 dark:text-gray-400">There are many to select element from dom, such as:</p>
+                    <ol class="font-medium mb-2 text-gray-500">
+                        <li>document.getElementById</li>
+                        <li>document.querySelector</li>
+                        <li>document.querySelectorAll</li>
+                        <li>document.getElementByTagName</li>
+                    </ol>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-3">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                    aria-controls="accordion-collapse-body-3">
+                    <span class="text-3xl">What is Call Stack Function?</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                    <p class="font-medium mb-2 text-gray-500 dark:text-gray-400">Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have regisrered a handle to that event. it is a provess that starts with the element that triggered the event and then bubbles up the the containing elements in the hierarchy. In event bubblinig, the event is first captured and handle by the innermost element and the propagrate to outer elements....</p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
+                    aria-controls="accordion-collapse-body-4">
+                    <span class="text-3xl">How to select element using DOM?</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                    <p class="font-medium mb-2 text-gray-500 dark:text-gray-400">A call stack is a mechanism for an interpreter (like the JavaScript interperter in a web browsser) to keep track of its place in a script that calls multiple function...</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./tailwind/tailwind.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>
+
 </html>

@@ -11,6 +11,13 @@ function getValueById(idName){
     return element;
 }
 
+// page switching function
+function switchingPage(id, page){
+    getValueById(id).addEventListener('click', function(){
+        window.location.href = page;
+    })
+}
+
 // area calculation
 function areaCalculation(btnId, mul){
     getValueById(btnId).addEventListener('click', function(event){

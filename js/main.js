@@ -4,3 +4,8 @@ areaCalculation('parallelogram-card-btn', "one");
 areaCalculation('rhombus-card-btn', "half");
 areaCalculation('pentagon-card-btn', "half");
 areaCalculation('ellipse-card-btn', "pi");
+
+// switching another page
+
+switchingPage('blog-btn', 'faq.html');
+switchingPage('geo-btn', 'index.html');
