@@ -9,3 +9,6 @@ areaCalculation('ellipse-card-btn', "pi");
 
 switchingPage('blog-btn', 'faq.html');
 switchingPage('geo-btn', 'index.html');
+
+// random color
+randColor('triangle-card')
