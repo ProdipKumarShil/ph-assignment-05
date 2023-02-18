@@ -1,3 +1,4 @@
+let count = 0;
 // random color
 function randH(s, el){ 
     let h = Math.floor(Math.random() * 360) + 1;
@@ -12,7 +13,8 @@ function getValueById(idName){
 
 function areaCalculation(btnId, mul){
     getValueById(btnId).addEventListener('click', function(event){
-        let area = 1;
+        count ++;
+        var area = 1;
         const pi = 3.1416;
         // card children
         const cardParent = event.target.parentNode.children;
@@ -20,6 +22,9 @@ function areaCalculation(btnId, mul){
         const firstInputValue = cardParent[3].children[0].children[0].value;
         const secondInputValue = cardParent[3].children[1].children[0].value;
         
+        // object name
+        const objectName = event.target.parentNode.children[1].innerText;
+
         // validate input field
         const firstInputField = cardParent[3].children[0].children[0];
         const secondInputField = cardParent[3].children[1].children[0];
@@ -29,8 +34,8 @@ function areaCalculation(btnId, mul){
             secondInputField.style.border = "2px solid #d33939";
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
-
             alert("input filed should a number");
+            return;
         }
         else if(firstInputValue === "" && secondInputValue === ""){
             firstInputField.style.border = "2px solid #d33939";
@@ -38,6 +43,7 @@ function areaCalculation(btnId, mul){
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
             alert("Please Enter a number")
+            return;
         }
         else if(firstInputValue <= 0 && secondInputValue <= 0){
             firstInputField.style.border = "2px solid #d33939";
@@ -45,6 +51,7 @@ function areaCalculation(btnId, mul){
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
             alert('Value should not be Zero or Empty')
+            return;
         }
         else{
             firstInputField.style.color = "";
@@ -53,30 +60,39 @@ function areaCalculation(btnId, mul){
             secondInputField.style.border = "";
         }
 
-
         // multiplication by condition
-        if(mul == 'one'){
+        if(mul === 'one'){
             area = 1 * parseFloat(firstInputValue) * parseFloat(secondInputValue);
-            console.log(area);
         }
-        else if(mul == 'half'){
+        else if(mul === 'half'){
             area = 0.5 * parseFloat(firstInputValue) * parseFloat(secondInputValue);
-            console.log(area);
         }
-        else if(mul == 'pi'){
+        else if(mul === 'pi'){
             area = pi * parseFloat(firstInputValue) * parseFloat(secondInputValue);
-            console.log(area);
-        }
-        else{
-            area == 0
-            console.log(area)
         }
         
-        
+        // calculation area
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${count}</td>
+        <td>${objectName}</td>
+        <td>${area.toFixed(2)} cm<sup>2</sup></td>
+        <td><button class="text-sm font-bold text-white bg-[#1090D8] hover:bg-[#0f78b4] h-8 w-[100%] rounded-lg my-2">Covert to m<sup>2</sup></button></td>
+        `
+        getValueById('table-body').appendChild(tr);
+
+        firstInputField.value = ''
+        secondInputField.value = ''
     })
 }
 
-areaCalculation('triangle-card-btn', "one")
+areaCalculation('triangle-card-btn', "half");
+areaCalculation('rectangle-card-btn', "one");
+areaCalculation('parallelogram-card-btn', "one");
+areaCalculation('rhombus-card-btn', "half");
+areaCalculation('pentagon-card-btn', "half");
+areaCalculation('ellipse-card-btn', "pi");
+
 
 
 
