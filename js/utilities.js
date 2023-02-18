@@ -11,6 +11,7 @@ function getValueById(idName){
     return element;
 }
 
+// area calculation
 function areaCalculation(btnId, mul){
     getValueById(btnId).addEventListener('click', function(event){
         count ++;
@@ -35,6 +36,8 @@ function areaCalculation(btnId, mul){
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
             alert("input filed should a number");
+            firstInputField.value = ''
+            secondInputField.value = ''
             return;
         }
         else if(firstInputValue === "" && secondInputValue === ""){
@@ -42,7 +45,9 @@ function areaCalculation(btnId, mul){
             secondInputField.style.border = "2px solid #d33939";
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
-            alert("Please Enter a number")
+            alert("Please Enter a number");
+            firstInputField.value = ''
+            secondInputField.value = ''
             return;
         }
         else if(firstInputValue <= 0 && secondInputValue <= 0){
@@ -50,7 +55,9 @@ function areaCalculation(btnId, mul){
             secondInputField.style.border = "2px solid #d33939";
             firstInputField.style.color = "#d33939";
             secondInputField.style.color = "#d33939";
-            alert('Value should not be Zero or Empty')
+            alert('Value should not be Zero or Empty');
+            firstInputField.value = ''
+            secondInputField.value = ''
             return;
         }
         else{
@@ -73,12 +80,18 @@ function areaCalculation(btnId, mul){
         
         // calculation area
         const tr = document.createElement("tr");
-        tr.innerHTML = `
-        <td>${count}</td>
-        <td>${objectName}</td>
-        <td>${area.toFixed(2)} cm<sup>2</sup></td>
-        <td><button class="text-sm font-bold text-white bg-[#1090D8] hover:bg-[#0f78b4] h-8 w-[100%] rounded-lg my-2">Covert to m<sup>2</sup></button></td>
-        `
+        if(count % 2 == 0){
+            tr.classList.add('bg-slate-50')
+        }
+        else{
+            tr.classList.add('bg-slate-200')
+        }
+            tr.innerHTML = `
+            <td>${count}</td>
+            <td>${objectName}</td>
+            <td>${area.toFixed(2)} cm<sup>2</sup></td>
+            <td><button class="text-sm font-bold text-white bg-[#1090D8] hover:bg-[#0f78b4] h-8 w-[100%] rounded-lg my-2">Covert to m<sup>2</sup></button></td>
+            `;
         getValueById('table-body').appendChild(tr);
 
         firstInputField.value = ''
@@ -86,12 +99,7 @@ function areaCalculation(btnId, mul){
     })
 }
 
-areaCalculation('triangle-card-btn', "half");
-areaCalculation('rectangle-card-btn', "one");
-areaCalculation('parallelogram-card-btn', "one");
-areaCalculation('rhombus-card-btn', "half");
-areaCalculation('pentagon-card-btn', "half");
-areaCalculation('ellipse-card-btn', "pi");
+
 
 
 
